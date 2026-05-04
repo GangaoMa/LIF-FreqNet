@@ -58,7 +58,7 @@ class IFFT(nn.Module):
 
         self.conv1 = nn.Sequential(
             nn.Conv2d(2, out_channels // 2, 3, 1, 1, bias=False),
-            nn.GELU(),  # 比ReLU更稳定
+            nn.GELU(),  
             nn.Conv2d(out_channels // 2, out_channels, 3, 1, 1, bias=False),
             nn.GELU()
         )
